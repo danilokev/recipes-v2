@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recetas saludables - Registro</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<script src="js/index.js"></script>
+</head>
+<body data-pagina="registro">
+	<!-- Encabezado principal -->
+	<header>
+		<a href="index.html"><img class="logo" src="images/logo.png" alt="Logo de una receta de cocina"></a>
+		<div class="logo-text">
+			<h1>Recetas saludables</h1>
+			<h2>Recetas de cocina para una vida sana</h2>
+		</div>
+	</header>
+	<!-- Menú de navegación -->
+	<nav>
+		<input type="checkbox" id="chkMenu">
+		<label for="chkMenu">&equiv;</label>
+		<ul id="menu"></ul>
+	</nav>
+	<!-- Formulario crear cuenta -->
+	<section class="form-container form-registro">
+		<form onsubmit="hacerRegistro(event)">
+			<h3>Crear cuenta</h3>
+			<div class="form-input">
+				<label for="usu"><span class="icon-user"></span>Usuario:</label>
+				<input type="text" name="usu" id="usu" onblur="comprobarLogin(this);" pattern="[A-Za-z][A-Za-z0-9]{3,19}" title="El usuario debe tener entre 4 y 20 caracteres y no puede empezar por un número" required autofocus>
+			</div>
+			<div class="form-input">
+				<label for="pwd"><span class="icon-key"></span>Contraseña:</label>
+				<input type="password" name="pwd" id="pwd" onblur="comprobarContrasenas();" pattern="[a-z0-9_.\-]{4,20}" title="La contraseña debe tener entre 4 y 20 caracteres y solo puede contener letras, números, y los caracteres _, -, y ." required>
+			</div>
+			<div class="form-input">
+				<label for="rpwd"><span class="icon-key"></span>Repetir contraseña:</label>
+				<input type="password" name="pwd2" id="rpwd" onblur="comprobarContrasenas();" pattern="[a-z0-9_.\-]{4,20}">
+			</div>
+			<div class="form-input">
+				<label for="email"><span class="icon-mail-alt"></span>Email:</label>
+				<input type="email" name="email" id="email" required>
+			</div>
+			<div class="form-btn">
+				<input type="reset" value="Limpiar" class="btn">
+				<input type="submit" value="Crear" class="btn">
+			</div>
+			<footer class="form-footer">
+				<p>¿Ya tienes una cuenta? Ir a <a href="login.html">login</a></p>
+			</footer>
+		</form>
+	</section>
+	<!-- Pie de página -->
+	<footer class="footer-container">
+		<p>&copy; 2024 <a href="acerca.html">Contacto</a>. Ingeniería Multimedia.</p>
+		<p>PCW</p>
+	</footer>
+
+	<script>
+		mostrarMenu();
+	</script>
+</body>
+</html>

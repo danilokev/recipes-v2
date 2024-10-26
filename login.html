@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recetas saludables - Login</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<script src="js/index.js"></script>
+</head>
+<body data-pagina="login">
+	<!-- Encabezado principal -->
+	<header>
+		<a href="index.html"><img class="logo" src="images/logo.png" alt="Logo de una receta de cocina"></a>
+		<div class="logo-text">
+			<h1>Recetas saludables</h1>
+			<h2>Recetas de cocina para una vida sana</h2>
+		</div>
+	</header>
+	<!-- Menú de navegación -->
+	<nav>
+		<input type="checkbox" id="chkMenu">
+		<label for="chkMenu">&equiv;</label>
+		<ul id="menu"></ul>
+	</nav>
+	<!-- Formulario login -->
+	<section class="form-container form-login">
+		<form onsubmit="hacerLogin(event);">
+			<h3>Iniciar sesión</h3>
+			<div class="form-input">
+				<label for="login"><span class="icon-user"></span>Usuario:</label>
+				<input type="text" name="usu" id="login" required autofocus>
+			</div>
+			<div class="form-input">
+				<label for="pass"><span class="icon-key"></span>Contraseña:</label>
+				<input type="password" name="pwd" id="pass" required>
+			</div>
+			<div class="form-btn">
+				<input type="reset" value="Limpiar" class="btn">
+				<input type="submit" value="Iniciar sesión" class="btn">
+			</div>
+			<footer class="form-footer">
+				<p>¿Aún no tienes una cuenta? Ir a <a href="registro.html">registro</a></p>
+			</footer>
+		</form>
+	</section>
+	<!-- Pie de página -->
+	<footer class="footer-container">
+		<p>&copy; 2024 <a href="acerca.html">Contacto</a>. Ingeniería Multimedia.</p>
+		<p>PCW</p>
+	</footer>
+
+	<script>
+		mostrarMenu();
+	</script>
+</body>
+</html>

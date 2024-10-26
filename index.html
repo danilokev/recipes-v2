@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetas saludables - Inicio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <script src="js/index.js"></script>
+</head>
+<body data-pagina="index">
+  <!-- Encabezado principal -->
+  <header>
+    <a href="index.html"><img class="logo" src="images/logo.png" alt="Logo de una receta de cocina"></a>
+    <div class="logo-text">
+      <h1>Recetas saludables</h1>
+      <h2>Recetas de cocina para una vida sana</h2>
+    </div>
+  </header>
+  <!-- Menú de navegación -->
+  <nav>
+    <label for="chkMenu">&equiv;</label>
+    <input type="checkbox" name="menu" id="chkMenu">
+    <ul id="menu"></ul>
+  </nav>
+  <a href="#top" id="btn-subir">Ir Arriba</a>
+  <!-- Tarjetas de las recetas  -->
+  <section>
+    <h3>Últimas recetas añadidas</h3>
+    <div class="container" id="recetas">
+      <!-- Aquí se añaden las recetas -->
+    </div>
+    <!-- Número de recetas y el total -->
+    <footer class="recipes-footer" id="myFooter"></footer>
+  </section>
+  <!-- Pie de página -->
+  <footer class="footer-container">
+    <p>&copy; 2024 <a href="acerca.html">Contacto</a>. Ingeniería Multimedia.</p>
+    <p>PCW</p>
+  </footer>
+
+  <script>
+    mostrarMenu();
+    pedirRecetas();
+  </script>
+</body>
+</html>

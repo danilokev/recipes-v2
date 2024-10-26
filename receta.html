@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetas saludables - Recetas</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<script src="js/index.js"></script>
+</head>
+<body data-pagina="receta">
+  <!-- Encabezado principal -->
+	<header>
+		<a href="index.html"><img class="logo" src="images/logo.png" alt="Logo de una receta de cocina"></a>
+		<div class="logo-text">
+			<h1>Recetas saludables</h1>
+			<h2>Recetas de cocina para una vida sana</h2>
+		</div>
+	</header>
+	<!-- Menú de navegación -->
+	<nav>
+    <label for="chkMenu">&equiv;</label>
+    <input type="checkbox" name="menu" id="chkMenu">
+    <ul id="menu"></ul>
+  </nav>
+	<article class="receta">
+		<header>
+			<h3 id="nombreReceta"></h3>
+			<div id="detalles-autor"></div>
+		</header>
+		<div id="detalles-receta"></div>
+		<div class="receta-wrap">
+			<section class="receta-fotos">
+				<h4>Fotos</h4>
+				<div id="fotos-recetas">
+					<!-- Añadir fotos -->
+				</div>
+			</section>
+			<section class="receta-etiquetas">
+				<h4>Etiquetas</h4>
+				<ul id="eti-recetas">
+					<!-- Añadir etiquetas -->
+				</ul>
+			</section>
+			<section class="receta-ingre">
+				<h4>Ingredientes</h4>
+				<ul id="ingr-recetas">
+					<!-- Añadir ingredientes -->
+				</ul>
+			</section>
+			<section class="receta-elaboracion">
+				<h4>Elaboración</h4>
+				<p id="texto-elaboracion"></p>
+			</section>
+			<section>
+				<h4>Comentarios</h4>
+				<div id="comentario-login">
+					<div id="formulario">
+						<!-- Formulario de comentarios -->
+					</div>
+				</div>
+				<div id="comentarios">
+					<!-- Todos los comentarios -->
+				</div>
+			</section>
+		</div>
+	</article>
+	<!-- Pie de página -->
+	<footer class="footer-container">
+		<p>&copy; 2024 <a href="acerca.html">Contacto</a>. Ingeniería Multimedia.</p>
+		<p>PCW</p>
+	</footer>
+
+	<script>
+		mostrarMenu();
+    mostrarInfoReceta();
+		pedirFormulario();
+	</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recetas saludables - Acerca</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<script src="js/index.js"></script>
+</head>
+<body data-pagina="acerca">
+	<!-- Encabezado principal -->
+	<header>
+		<a href="index.html"><img class="logo" src="images/logo.png" alt="Logo de una receta de cocina"></a>
+		<div class="logo-text">
+			<h1>Recetas saludables</h1>
+			<h2>Recetas de cocina para una vida sana</h2>
+		</div>
+	</header>
+	<!-- Menú de navegación -->
+	<nav>
+		<input type="checkbox" id="chkMenu">
+		<label for="chkMenu">&equiv;</label>
+		<ul id="menu"></ul>
+	</nav>
+	<main class="acerca">
+		<div class="info-acerca-container">
+			<section>
+				<h3>Información sobre la práctica</h3>
+				<div>
+					<label>Asignatura</label>
+					<p>Programación del cliente web (PCW)</p>
+				</div>
+				<div>
+					<label>Titulación</label>
+					<p>Grado en ingeniería multimedia</p>
+				</div>
+				<div>
+					<label>Año académico</label>
+					<p>2023/2024</p>
+				</div>
+				<div>
+					<label>Práctica 2</label>
+					<p>HTML, CSS y JAVASCRIPT</p>
+				</div>
+			</section>
+			<section>
+				<h3>Información sobre el autor</h3>
+				<div>
+					<label>Nombre</label>
+					<p>Kevin Danilo</p>
+				</div>
+				<div>
+					<label>DNI</label>
+					<p>XXXXXXXX</p>
+				</div>
+				<div>
+					<label>Email</label>
+					<p>user@mail.com</p>
+				</div>
+				<div>
+					<label>Grupo de pŕacticas</label>
+					<p>Grupo 4 - Jueves, 19:00 a 21:00</p>
+				</div>
+			</section>
+		</div>
+		<section class="section-doc">
+			<h3>Documentación de la práctica</h3>
+			<p>Para esta segunda práctica, se ha logrado implementar una buena parte de los requisitos especificados. Sin
+				embargo, es importante señalar las áreas que aún no han sido completadas y que serán mejoradas en el futuro.</p>
+			<p>En primer lugar, en el archivo <strong>index.html</strong>, se utilizó una variable global como contador para
+				mostrar el número de recetas presentadas. En futuras actualizaciones, se planea optimizar este aspecto.</p>
+			<p>En cuanto a <strong>receta.html</strong>, aún no se ha implementado la redirección a
+				<strong>index.html</strong> cuando se introduce un ID específico que no existe en la base de datos. No obstante,
+				si se ingresa cualquier otro valor que no sea un número, se realiza la redirección correctamente.</p>
+			<p>Por otro lado, aunque funcional, he decidido no incluir el carrusel de fotos debido al uso de variables
+				globales, con el objetivo de evitar posibles penalizaciones. En su lugar, únicamente se muestra la primera foto
+				con su respectiva descripción. La implementación completa del carrusel está actualmente comentada en el código
+				JS.</p>
+			<p>En <strong>buscar.html</strong>, no se realiza la petición si se introduce directamente en la URL una dirección
+				específica, como por ejemplo <i>buscar.html?u=usuario2</i>. Esta funcionalidad será mejorada en futuras
+				versiones. Además, si no se introduce ningún valor en los campos del formulario de búsqueda y se hace clic en
+				<i>buscar</i>, se mostrarán todas las recetas existentes. Se ha optado por eliminar el botón para cargar más
+				resultados de recetas.</p>
+			<p>Finalmente, en <strong>nueva.html</strong>, si no se agrega ninguna foto al crear una nueva receta, ésta se
+				creará igualmente, pero sin imagen, mostrando únicamente el texto alternativo. Además, se planea mejorar algunos
+				aspectos del diseño de la web.</p>
+		</section>
+	</main>
+	<!-- Pie de página -->
+	<footer class="footer-container">
+		<p>&copy; 2024 <a href="acerca.html">Contacto</a>. Ingeniería Multimedia.</p>
+		<p>PCW</p>
+	</footer>
+
+	<script>
+		mostrarMenu();
+	</script>
+</body>
+</html>

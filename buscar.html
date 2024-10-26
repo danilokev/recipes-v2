@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recetas saludables - Buscar</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<script src="js/index.js"></script>
+</head>
+<body data-pagina="buscar">
+	<!-- Encabezado principal -->
+	<header>
+		<a href="index.html"><img class="logo" src="images/logo.png" alt="Logo de una receta de cocina"></a>
+		<div class="logo-text">
+			<h1>Recetas saludables</h1>
+			<h2>Recetas de cocina para una vida sana</h2>
+		</div>
+	</header>
+	<!-- Menú de navegación -->
+	<nav>
+		<input type="checkbox" id="chkMenu">
+		<label for="chkMenu">&equiv;</label>
+		<ul id="menu"></ul>
+	</nav>
+	<main class="buscar-container">
+		<!-- Formulario buscar -->
+		<section class="form-container form-buscar">
+			<h3>Filtro de búsqueda</h3>
+			<form onsubmit="buscarRecetas(event);">
+				<div class="form-input">
+					<label for="contiene">Nombre o elaboración:</label>
+					<input type="text" name="nombre" id="contiene" placeholder="macarrones con tomate">
+				</div>
+				<div class="form-input">
+					<label for="ingredientes">Ingredientes:</label>
+					<input type="text" name="ingredientes[]" id="ingredientes" placeholder="macarrones, tomate, ...">
+				</div>
+				<div class="form-input">
+					<label for="etiquetas">Etiquetas:</label>
+					<input type="text" name="etiquetas[]" id="etiquetas" list="lista" placeholder="pasta, plato principal, ...">
+					<datalist id="lista"></datalist>
+				</div>
+				<div class="form-input">
+					<label for="select">Dificultad:</label>
+					<select name="dificultad" id="select">
+						<option> --Seleccione una dificultad-- </option>
+						<option value="0">Baja</option>
+						<option value="1">Media</option>
+						<option value="2">Alta</option>
+					</select>
+				</div>
+				<footer class="form-btn">
+					<input type="reset" value="Limpiar" class="btn">
+					<input type="submit" value="Buscar" class="btn">
+				</footer>
+			</form>
+		</section>
+		<!-- Tarjetas de las recetas -->
+		<section>
+			<h3>Últimas recetas añadidas</h3>
+			<div class="container" id="recetasBuscar">
+				<!-- Recetas buscadas -->
+			</div>
+			<footer class="recipes-footer" id="myFooter"></footer>
+		</section>
+	</main>
+	<!-- Pie de página -->
+	<footer class="footer-container">
+		<p>&copy; 2024 <a href="acerca.html">Contacto</a>. Ingeniería Multimedia.</p>
+		<p>PCW</p>
+	</footer>
+
+	<script>
+		mostrarMenu();
+		pedirEtiquetas();
+	</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recetas saludables - Nueva</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<script src="js/index.js"></script>
+</head>
+<body data-pagina="nueva">
+	<!-- Encabezado principal -->
+	<header>
+		<a href="index.html"><img class="logo" src="images/logo.png" alt="Logo de una receta de cocina"></a>
+		<div class="logo-text">
+			<h1>Recetas saludables</h1>
+			<h2>Recetas de cocina para una vida sana</h2>
+		</div>
+	</header>
+	<!-- Menú de navegación -->
+	<nav>
+		<input type="checkbox" id="chkMenu">
+		<label for="chkMenu">&equiv;</label>
+		<ul id="menu"></ul>
+	</nav>
+	<main class="nueva">
+		<h3>Añade una nueva receta</h3>
+		<form class="form-nueva" onsubmit="crearReceta(event);">
+			<div class="form-flex">
+				<!-- ============== Añadir información receta ============== -->
+				<fieldset>
+					<legend>Añadir información de receta</legend>
+					<div class="form-input">
+						<label for="nom">Nombre de la receta:</label>
+						<input type="text" name="nombre" id="nom" placeholder="macarrones con tomate" maxlength="100"
+							required>
+					</div>
+					<div class="form-input form-wrap">
+						<label for="tmpo">Tiempo de elaboración:</label>
+						<input type="number" name="tiempo" id="tmpo" placeholder="90" min="1" required>
+						<span>minutos</span>
+					</div>
+					<div class="form-input form-wrap">
+						<label for="prnas">Para cuantas personas:</label>
+						<input type="number" name="personas" id="prnas" placeholder="1-10" min="1" max="10" required>
+					</div>
+					<div class="form-input">
+						<label for="select">Dificultad:</label>
+						<select name="dificultad" id="select">
+							<option> --Selecciona una dificultad-- </option>
+							<option value="0">Baja</option>
+							<option value="1">Media</option>
+							<option value="2">Alta</option>
+						</select>
+					</div>
+					<div class="form-input">
+						<label for="ingr">Ingredientes:</label>
+						<input type="text" id="ingr" placeholder="macarrones, tomate, ...">
+						<button class="btn-plus" type="button" onclick="anyadirIngrediente();">Añadir ingrediente</button>
+						<!-- Aquí se añadiran las etiquetas de los ingredientes -->
+						<ul id="ingredientes"></ul>
+					</div>
+					<div class="form-input">
+						<label for="eti">Etiquetas:</label>
+						<input type="text" id="eti" placeholder="plato principal, pasta, ..." list="lista">
+						<datalist id="lista"></datalist>
+						<button class="btn-plus" type="button" onclick="anyadirEtiqueta();">Añadir etiqueta</button>
+						<!-- Aquí se añadiran las etiquetas -->
+						<ul id="etiquetas"></ul>
+					</div>
+					<div class="form-input">
+						<label for="text-area">Proceso de elaboración:</label>
+						<textarea name="elaboracion" id="text-area" placeholder="Escribe la elaboración aquí..." required></textarea>
+					</div>
+				</fieldset>
+				<!-- ============== Añadir fotos ============== -->
+				<fieldset>
+					<legend>Añadir Fotos</legend>
+					<div id="fotos" class="form-div-fotos">
+						<!-- Aquí se añadiran las fotos subidas -->
+					</div>
+					<footer>
+						<button type="button" class="btn-plus" onclick="anyadirFoto(event);">Añadir foto</button>
+					</footer>
+				</fieldset>
+			</div>
+			<footer class="form-btn">
+				<input type="reset" value="Limpiar" class="btn">
+				<input type="submit" value="Crear receta" class="btn">
+			</footer>
+		</form>
+	</main>
+	<!-- Pie de página -->
+	<footer class="footer-container">
+		<p>&copy; 2024 <a href="acerca.html">Contacto</a>. Ingeniería Multimedia.</p>
+		<p>PCW</p>
+	</footer>
+
+	<script>
+		mostrarMenu();
+		pedirEtiquetas();
+	</script>
+</body>
+</html>
