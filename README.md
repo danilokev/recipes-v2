@@ -1,2 +1,2 @@
 # recipes-v2
-Proyecto de la asignatura PCW del grado de Ingeniería Multimedia
+Proyecto de la asignatura PCW (Programación del Cliente Web) del grado de Ingeniería Multimedia
